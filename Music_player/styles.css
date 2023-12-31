@@ -1,0 +1,42 @@
+body {
+    font-family: monospace, sans-serif;
+    text-decoration-color: bisque;
+    background-color: #21d08a75;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.music-player {
+    background-color: #a8deda;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.playlist {
+    text-align: left;
+    font-weight: bold;
+}
+
+#playlist li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #FF6B6B; 
+}
