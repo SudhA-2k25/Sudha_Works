@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: 300ms;  /* 300 milliseec time duration*/
+}
+
+/* root var  --primary color */
+:root {
+    --primary: #094b65;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Section styles */
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('forest.png');
+    /* Forest img */
+    background-size: cover;
+    background-attachment: fixed; /* Parallax effect */
+}
+
+
+
+/* FadeIn animation */
+@keyframes fadeIn {
+    0% { opacity: 0; 
+    }
+    25% { opacity: 0.2; 
+    }
+    50% { opacity: 0.4; 
+    }
+    75% { opacity: 0.7; 
+    }
+    100% { opacity: 1; 
+    }
+}
+
+/*  fadeIn */
+.sec, #cards, header {
+    animation: fadeIn 2s ease-in; /* slow->quick */
+}
+
+/* SlideIn */
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+/*  cubic-bezier */
+header {
+    animation: slideIn 2s ease-out;
+    animation: slideIn 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+/* full body h */
+body {
+    overflow-x: hidden;
+    background: #00ffea;
+    min-height: 100vh;
+}
+
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+
+/* section - Text */
+#text {
+    position: absolute;
+    color: var(--primary);
+    font-size: 10vw;
+    text-align: center;
+    line-height: 0.8em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-150%);
+}
+
+
+#header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header navi */
+#header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+/* Header navi links */
+#header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: var(--primary);
+    border-radius: 20px;
+}
+
+/* Header nav link hover n active style */
+#header ul li a:hover,
+#header ul li a.active {
+    background: var(--primary);
+    color: #fff;
+}
+
+
+section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--primary), transparent);
+    z-index: 10;
+}
+
+/* Img in landing page */
+section img {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+section #text {
+    position: absolute;
+    color: var(--primary);
+    font-size: 10vw;
+    text-align: center;
+    line-height: .55em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-60%);
+    animation: danceText 1s infinite;
+}
+
+/* span text */
+section #text span {
+    font-size: .22em;
+    letter-spacing: 2px;
+    font-weight: 420;
+}
+
+/* Keyframes for dancing anim */
+@keyframes danceText {
+    0%, 100% { transform: translateY(-60%); }
+    50% { transform: translateY(-55%); }
+}
+
+/* Btn - jump in  */
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #fff;
+    color: var(--primary);
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(100px);
+}
+
+/* Button : hover */
+#btn:hover {
+    color: #13bdd2;
+}
+
+/* About bg gradient */
+.sec {
+    position: relative;
+    padding: 100px;
+    background: linear-gradient(#094b65, #00ffea);
+}
+
+/* Header for the 'Teams' section */
+.teams {
+    position: relative;
+    padding: 100px;
+    background: var(--primary);
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+#cards {
+    margin-top: -50px;
+}
+
+
+
+/* Heading for ABOUT */
+.sec h2 {
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Para styles for ABOUT */
+.sec p {
+    font-size: 1em;
+    color: #fff;
+}
+
+/* Footer */
+#foot {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: goldenrod;
+    font-family: 'Rancho', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* Footer para */
+#foot p {
+    margin: 0;
+}
+
+/* Container for team cards */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#094b65, #13bdd2);
+}
+
+/* Team cards */
+.container .glass {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(wheat, transparent);
+    border: 1px solid rgba(255, 255, 155, 0.1);
+    box-shadow: 0 225px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    transform: rotate(calc(var(--r) * 1deg));
+    padding: 10px;
+}
+
+/* Hover : team cards */
+.container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 20px;
+}
+
+.container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0; /* NAME WRITTTING IN THE CARDS */
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(#094b65, #13bdd2);
+    padding-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aquamarine;
+    font-weight: bold;
+}
