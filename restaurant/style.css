@@ -1,0 +1,238 @@
+/* Defines CSS variables for colors */
+:root {
+   --red: crimson;  /*Variable Defining*/
+   --green: #53BF9D;
+   --yellow: #FFC54D;
+   --white: whitesmoke;
+}
+
+/* Reset margin and set font styles for body and h2 elements */
+body, h2 {
+   margin: 0; 
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+}
+
+/* Styling for the landing section */
+.landing {
+   background-image: url('bg.jpg');
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+   color: var(--white);
+   font-weight: bold;
+}
+
+/* Header styles for logo and navigation */
+header {
+   display: flex;
+   flex-wrap: wrap;
+   row-gap: 1em;
+   padding: 1em;
+}
+
+/* Logo styles */
+#logo {  /* 3 loGO:2 NAV */
+   flex: 3;
+   font-size: 1.35em;
+   min-width: 260px;
+}
+
+/* Navi styles */
+nav {
+   flex: 2;
+   display: flex;
+   align-items: center;
+}
+
+nav a {
+   flex: 1;
+}
+
+/* Hover effect for navi links */
+nav a:hover {
+   color: var(--green);
+}
+
+/* Icon styles for header */
+header h2 i, nav a i {
+   margin-right: 0.5em;
+}
+
+/* Styles for main text and callus action */
+.maintext {
+   display: flex;
+   flex-direction: column;
+   height: 50vh;
+   justify-content: center;
+   padding: 2em;
+}
+
+/* Tagline 1  */
+.tagline1 {
+   color: var(--red);
+   font-size: 2.5em;
+   font-weight: bolder;
+}
+
+/* Tagline 2 */
+.tagline2 {
+   color: var(--yellow);
+}
+
+.maintext div {
+   margin-top: 0.75em;
+}
+
+/* Button styles for online ordering */
+.maintext button {
+   width: 20vw;
+   margin-top: 2em;
+   border-radius: 10px;
+   padding: 0.7em;
+   background-color: var(--green);
+   color: #b5d93df0f;
+   border: 1px solid var(--green);
+   font-weight: bold;
+}
+
+/* Style for the menu sec */
+.menu {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   background: linear-gradient(to right, rgb(100, 100, 100), rgb(53, 52, 52));
+   color: var(--white);
+}
+
+/* Style for menu headings */
+#menuheading, #locheading {
+   background: linear-gradient(to right, rgb(100, 100, 100), rgb(53, 52, 52));
+   font-size: 2.5em;
+   color: var(--red);
+   display: flex;
+   justify-content: center;
+}
+
+/* Style for table headings */
+.menu th {
+   color: var(--green);
+   font-size: 1.8em;
+}
+
+/* Styles for tables and table rows */
+table {
+   width: 100%;
+   padding: 1em;
+}
+
+.menu tr {
+   display: flex;
+   justify-content: center;
+   margin-top: 0.8em;
+}
+
+/* Styles for table data  */
+.menu td:nth-child(1) {  /*Menu Parent Class*/
+   flex: 1;   
+   justify-self: left;
+}
+
+.menu td:nth-child(2) {
+   justify-self: right;
+}
+
+/* Styling for the main course section */
+.maincourse {
+   grid-row: span 2;
+}
+
+/* Styling for the locations section */
+.locations {
+   background: linear-gradient(to right, rgb(100, 100, 100), rgb(53, 52, 52));
+   color: var(--white);
+   display: flex;
+   flex-wrap: wrap;
+}
+
+/* Styling for location headings */
+.locations h2 {
+   color: var(--green);
+   margin-bottom: 0.8em;
+}
+
+/* Styles for location divs */
+.locations div {
+   flex: 1;
+   padding: 1em;
+   min-width: 220px;
+}
+
+/* Styling for the footer */
+footer {
+   background-color: rgb(55, 55, 55);
+   color: var(--white);
+   padding: 0.25em 1em;
+}
+
+/* Copyright text styles */
+#copyright {
+   margin-left: 20px;
+   
+}
+
+/* Social media menu styles */
+.social-menu ul {
+   display: flex;
+   padding: 0;
+}
+
+/* Styles for social media menu items */
+.social-menu ul li {
+   list-style: none;
+   display: inline-block;
+   margin: 0 15px; 
+}
+
+/* Styles for social media icons */
+.social-menu ul li .fab {
+   font-size: 25px;
+   line-height: 40px;
+   transition: 0.3s;6
+   color: #000;
+}
+
+/* Hover effect for social media icons */
+.social-menu ul li .fab:hover {
+   color: #fff;
+}
+
+/* Styles for social media links */
+.social-menu ul li a {
+   position: relative;
+   display: block;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: #fff;
+   text-align: center;
+   transition: 0.6s;
+   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect for social media links */
+.social-menu ul li a:hover {
+   transform: translate(0, -10%);
+}
+
+/* Social media link colors */
+.social-menu ul li:nth-child(1) a:hover {
+   background-color: #4267B2;
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+   background-color: #E4405F;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+   background-color: #00ACEE;
+}
